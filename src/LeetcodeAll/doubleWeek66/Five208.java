@@ -1,4 +1,4 @@
-package LeetcodeAll.LedoubleWeek66;
+package LeetcodeAll.doubleWeek66;
 
 import java.util.HashMap;
 import java.util.Map;

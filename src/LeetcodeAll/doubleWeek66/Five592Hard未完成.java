@@ -1,4 +1,4 @@
-package LeetcodeAll.LedoubleWeek66;
+package LeetcodeAll.doubleWeek66;
 
 public class Five592Hard未完成 {
     public static void main(String[] args) {

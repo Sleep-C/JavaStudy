@@ -1,4 +1,4 @@
-package LeetcodeAll.LedoubleWeek66;
+package LeetcodeAll.doubleWeek66;
 
 public class Six208排除特殊情况再数学分析 {
     public static void main(String[] args) {

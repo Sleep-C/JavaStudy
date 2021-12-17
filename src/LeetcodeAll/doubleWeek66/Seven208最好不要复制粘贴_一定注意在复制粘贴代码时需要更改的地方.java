@@ -1,4 +1,4 @@
-package LeetcodeAll.LedoubleWeek66;
+package LeetcodeAll.doubleWeek66;
 
 public class Seven208最好不要复制粘贴_一定注意在复制粘贴代码时需要更改的地方 {
     public static void main(String[] args) {

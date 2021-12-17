@@ -2,6 +2,7 @@ package daimasuixianglu.栈与队列;
 
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Stack;
 
 public class TwentyFive2 {
     public static void main(String[] args) {
