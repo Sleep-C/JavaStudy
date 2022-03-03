@@ -5,31 +5,28 @@ import java.util.*;
 public class Test写在方法外的变量如果要在static方法中调用必须在变量前加static {
 
     public static void main(String[] args) {
-        System.out.println(combinationSum(new int[]{2,7,6,3,5,1},9).toString());
+        System.out.println(findSubsequences(new int[]{84,-48,-33,-34,-52,72,75,-12,72,-45}));
     }
-    static LinkedList<Integer> tmp = new LinkedList<>();
-    static List<List<Integer>> result = new LinkedList<>();
-    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        Arrays.sort(candidates);
-        helper(candidates, target, 0);
+    static List<List<Integer>> result = new ArrayList<>();
+    static List<Integer> tmp = new ArrayList<>();
+    static Set<List<Integer>> set = new HashSet<>();
+    public static List<List<Integer>> findSubsequences(int[] nums) {
+        helper(nums, 0);
         return result;
     }
-    public static void helper(int[] cand,int target,int last){
-        if (target == 0){
-            result.add(new ArrayList<>(tmp));
-            return;
-        }
-        if (target < 0){
-            return;
-        }
-//        或者先排序后如下
-//        if (target < cand[last]){
-//            return;
-//        }
-        for (int i = last; i < cand.length; i++){
-            tmp.push(cand[i]);
-            helper(cand, target - cand[i], i);
-            tmp.pop();
+    public static void helper(int[] nums, int start){
+        for (int i = start; i < nums.length; i++){
+            if (i > start && nums[i] == nums[i - 1]) continue;
+            if (start == 0 || nums[i] >= nums[start - 1]){
+                tmp.add(nums[i]);
+                if (tmp.size() > 1 && !set.contains(tmp)){
+//                    set.add(tmp);
+                    result.add(new ArrayList<>(tmp));
+                    set.add(result.get(result.size() - 1));
+                }
+                helper(nums, i + 1);
+                tmp.remove(tmp.size() - 1);
+            }
         }
     }
 }
