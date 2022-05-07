@@ -1,8 +1,15 @@
 package daimasuixianglu.贪心;
 
-public class FiftyThree有点意思_试试分治法 {
-    public static void main(String[] args) {
+import java.util.*;
 
+public class FiftyThree有点意思_看看分治法的思路 {
+    public static void main(String[] args) {
+        Queue<Integer> queue = new LinkedList<>();
+        queue.isEmpty();
+        Stack<Integer> stack = new Stack<>();
+        stack.push(1);
+        stack.pop();
+        stack.isEmpty();
     }
     //重点在于对于负数/全负数组的处理
     public int maxSubArray(int[] nums) {
